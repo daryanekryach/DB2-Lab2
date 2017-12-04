@@ -13,16 +13,15 @@ public class Main {
 
     public static void main(String[] args) {
         MongoDB mongo = new MongoDB();
-        parseCSV();
+        //parseCSV();
         //mongo.insert(parseCSV());
         printQuery(mongo.getLogsBySortedByIP());
-        System.out.println("BY URL");
-        printQuery(mongo.getLogsBySortedByURL());
-        System.out.println("BY URL FOR IP");
+        printQuery(mongo.getLogsBySortedByURL("2017-11-05T10:00:00Z","2017-11-06T20:00:00Z"));
         printQuery(mongo.getLogsBySortedByURL("1.1.1.1"));
 
         printQuery(mongo.getURLVisitedDuration());
         printQuery(mongo.getURLSumOfVisits());
+        printQuery(mongo.getURLVisitsPerPeriod("2017-11-05T10:00:00Z","2017-11-08T20:00:00Z"));
         printQuery(mongo.getIPSumAndDuration());
     }
 
