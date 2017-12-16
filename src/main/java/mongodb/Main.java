@@ -20,8 +20,7 @@ public class Main {
     }
 
     public static boolean workWithMongo(MongoDB mongo){
-        //parseCSV();
-        //mongo.insert(parseCSV());
+        mongo.insert(parseCSV());
         printQuery(mongo.getLogsBySortedByIP());
         printQuery(mongo.getLogsBySortedByURL("2017-11-05T10:00:00Z","2017-11-06T20:00:00Z"));
         printQuery(mongo.getLogsBySortedByURL("1.1.1.1"));
