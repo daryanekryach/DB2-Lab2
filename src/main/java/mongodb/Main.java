@@ -13,6 +13,13 @@ public class Main {
 
     public static void main(String[] args) {
         MongoDB mongo = new MongoDB();
+        Metrics.start();
+        workWithMongo(mongo);
+        Metrics.stop();
+        Metrics.getAllMetrics();
+    }
+
+    public static boolean workWithMongo(MongoDB mongo){
         //parseCSV();
         //mongo.insert(parseCSV());
         printQuery(mongo.getLogsBySortedByIP());
@@ -23,9 +30,10 @@ public class Main {
         printQuery(mongo.getURLSumOfVisits());
         printQuery(mongo.getURLVisitsPerPeriod("2017-11-05T10:00:00Z","2017-11-08T20:00:00Z"));
         printQuery(mongo.getIPSumAndDuration());
+        return true;
     }
 
-    public static ArrayList<WebLog> parseCSV() {
+    private static ArrayList<WebLog> parseCSV() {
         ArrayList<WebLog> logs = new ArrayList<>();
         Converter converter = new Converter();
         String csvName = "logs.csv";
@@ -53,7 +61,7 @@ public class Main {
         return logs;
     }
 
-    public static void printQuery(Iterator<Document> query){
+    private static void printQuery(Iterator<Document> query){
         while (query.hasNext()) {
             System.out.println(query.next());
         }

@@ -33,8 +33,4 @@ public class WebLog {
                 .create();
         return gson.toJson(this);
     }
-
-    public int timestampToInt(){
-        return timeStamp.getNanos();
-    }
 }

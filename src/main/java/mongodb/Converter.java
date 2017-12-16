@@ -1,8 +1,5 @@
 package mongodb;
 
-import java.util.ArrayList;
-import java.util.Date;
-
 public class Converter {
 
     public WebLog convertCSVToObject(String csvLine){
@@ -17,9 +14,9 @@ public class Converter {
 
     public String convertToJSON(WebLog webLogs){
         StringBuilder json = new StringBuilder();
-        json.append("{").append("URL:\"").append(webLogs.getURL()).append("\",IP:\"")
-                .append(webLogs.getIP()).append("\",timeStamp:\"").append(webLogs.getTimeStamp())
-                .append("\",timeSpent:\"").append(webLogs.getTimeSpent()).append("\"}");
+        json.append("{").append("\"URL\":\"").append(webLogs.getURL()).append("\",\"IP\":\"")
+                .append(webLogs.getIP()).append("\",\"timeStamp\":\"").append(webLogs.getTimeStamp())
+                .append("\",\"timeSpent\":").append(webLogs.getTimeSpent()).append("}");
         return json.toString();
     }
 }
