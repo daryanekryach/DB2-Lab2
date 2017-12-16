@@ -1,13 +1,12 @@
 # DB2-Lab2
 [![Build Status](https://travis-ci.org/daryanekryach/DB2-Lab2.svg?branch=master)](https://travis-ci.org/daryanekryach/DB2-Lab2)
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b5dcceb1e9e54fc4aa319e0117a29db0)](https://www.codacy.com/app/daryanekryach/DB2-Lab2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=daryanekryach/DB2-Lab2&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/b5dcceb1e9e54fc4aa319e0117a29db0)](https://www.codacy.com/app/daryanekryach/DB2-Lab2?utm_source=github.com&utm_medium=referral&utm_content=daryanekryach/DB2-Lab2&utm_campaign=Badge_Coverage)
 [![codecov](https://codecov.io/gh/daryanekryach/DB2-Lab2/branch/master/graph/badge.svg)](https://codecov.io/gh/daryanekryach/DB2-Lab2)
 
 *This is the repository for 2nd lab of Databases-2 with MongoDB*
 
 ***
-
-## TASK
 
 ## RESULTS
 ### Metrics
